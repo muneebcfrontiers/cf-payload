@@ -13,7 +13,7 @@ export default function Hero() {
       <section className="bg[#d7eeff] text-white min-h-96 flex flex-col justify-center px-6 md:mt-0 mt-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className=" md:pr-20 md:pl-20 pr-4 pl-4">
-            <h1 className="text-gray-700 text-2xl md:text-4xl font-bold mb-4">
+            <h1 className="text-gray-700 text-2xl md:text-4xl font-bold md:mb-2">
               We <span className="bg-[#0091e1] text-white rounded">simplify the complex</span> with</h1>
               <h1 className="text-gray-700 text-2xl md:text-4xl font-bold mb-8">stunning storytelling!</h1>
             <p className="text-md md:text-xl text-gray-700 mb-8">
