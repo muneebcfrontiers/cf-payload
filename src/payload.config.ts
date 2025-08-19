@@ -17,7 +17,6 @@ import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 import Navigation from './collections/globals/navigation'
-import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob';
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -69,13 +68,6 @@ export default buildConfig({
   globals: [Header, Footer, Navigation],
   plugins: [
     ...plugins,
-    vercelBlobStorage({
-       enabled: true,
-       collections: { // If you have another collection that supports uploads, you can add it below
-         media: true,
-       },
-       token: process.env.BLOB_READ_WRITE_TOKEN
-     })
     // storage-adapter-placeholder
   ],
   secret: process.env.PAYLOAD_SECRET,
