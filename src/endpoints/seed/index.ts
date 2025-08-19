@@ -44,10 +44,37 @@ export const seed = async ({
   await Promise.all(
     globals.map((global) =>
       payload.updateGlobal({
-        slug: global,
-        data: {
-          navItems: [],
-        },
+        slug: 'navigation',
+          data: {
+            menu: [
+              {
+                label: "Home",
+                url: "/",
+                children: [
+                  {
+                    label: "Submenu 1",
+                    url: "/submenu-1",
+                    description: "This is submenu 1",
+                    image: "/cfhero.png",
+                    children: [
+                      {
+                        label: "Sub-sub 1",
+                        url: "/sub-sub-1",
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                label: "About",
+                url: "/about",
+              },
+            ],
+          },
+        // slug: global,
+        // data: {
+        //   navItems: [],
+        // },
         depth: 0,
         context: {
           disableRevalidate: true,
